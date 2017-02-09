@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">deCODE</string>
+    <string name="text_loading">loading..</string>
+    <string name="A">strngA</string>
+    <string name="B">strngB</string>
+    <string name="C">strngC</string>
+    <string name="D">strngD</string>
+    <string name="E">strngE</string>
+    <string name="F">strngF</string>
+    <string name="howtoplay">
+        This is a logic based puzzle game which puts to test you deduction skills
+        to see if you can guess the random code set at hte beginning of the game.
+        \n\n
+        1. When you begin a new game, a 4 letter code is \n\t set by the system.\n\n
+        2. You have to guess the code using the 6 letters \n\t A,B,C,D,E,F which are seen on the play screen as buttons.\n\n
+        3. After typing your guess, click "check" button to submit.\n\n
+        4. To clear the last letter in the entry, click "clear" button.\n\n
+        5. You have 6 trials to guess the code.\n\n
+        6. For each entry you will see hint for your guess \n\t as C , J, X.\n\n
+            Here, \n
+        <string name="shortcuts"
+            textColor = "#dfe4d2">
+                    C = Letters in correct position\n
+                    J = Letters in wrong/ Jumbled position.\n
+                    X = Letters not present in the code.\n
+        </string>
+        \n
+        7. Using these hints, you will be trying to decode the code.\n
+        If you fail to decode it, you will get to know the code after 6 failure trials.\n
+
+    </string>
+    <string name="test">testing</string>
+</resources>

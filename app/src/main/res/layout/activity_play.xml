@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_play"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#682324"
+    tools:context="com.thinkhole.deCODE.PlayActivity">
+
+    <TextView
+        android:text="C         J           X"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:textAlignment="center"
+        android:textColor="#f7d618"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/textViewCJX"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/buttonF"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="26dp"
+        android:layout_marginEnd="26dp" />
+
+    <Button
+        android:text="A"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/editcheckbutton"
+        android:layout_marginTop="22dp"
+        android:id="@+id/buttonA"
+        android:layout_below="@+id/editText"
+        android:layout_marginLeft="35dp"/>
+
+    <Button
+        android:text="Check"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/editcheckbutton"
+        android:id="@+id/button_check"
+        android:layout_alignTop="@+id/editText"
+        android:layout_alignBaseline="@id/editText"
+        android:layout_alignRight="@+id/textViewCJX"
+        android:layout_alignEnd="@+id/textViewCJX" />
+
+    <Button
+        android:text="Clear"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/button_clear"
+        android:background="@drawable/editcheckbutton"
+        android:layout_alignBaseline="@+id/editText"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_toLeftOf="@+id/button_check"
+        android:layout_toStartOf="@+id/button_check"
+        android:layout_marginRight="10dp"/>
+
+    <Button
+        android:text="B"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/editcheckbutton"
+        android:id="@+id/buttonB"
+        android:layout_alignBaseline="@+id/buttonA"
+        android:layout_alignBottom="@+id/buttonA"
+        android:layout_marginLeft="85dp"/>
+
+    <Button
+        android:text="E"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonE"
+        android:background="@drawable/editcheckbutton"
+        android:layout_above="@+id/textViewCJX"
+        android:layout_marginLeft="235dp" />
+
+    <Button
+        android:text="F"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/editcheckbutton"
+        android:id="@+id/buttonF"
+        android:layout_alignBaseline="@+id/buttonD"
+        android:layout_alignBottom="@+id/buttonD"
+        android:layout_marginLeft="285dp"/>
+
+    <Button
+        android:text="D"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonD"
+        android:background="@drawable/editcheckbutton"
+        android:layout_alignBaseline="@+id/buttonC"
+        android:layout_alignBottom="@+id/buttonC"
+        android:layout_marginLeft="185dp"/>
+
+    <Button
+        android:text="C"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonC"
+        android:background="@drawable/editcheckbutton"
+        android:layout_alignBaseline="@+id/buttonB"
+        android:layout_alignBottom="@+id/buttonB"
+        android:layout_marginLeft="135dp"/>
+
+    <TableLayout
+        android:id="@+id/table_main"
+        android:layout_width="wrap_content"
+        android:layout_height="230dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignLeft="@id/editText"
+        android:layout_alignRight="@id/button_check"
+        android:layout_below="@+id/textViewCJX">
+    </TableLayout>
+
+    <TextView
+        android:text="S.No"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:textColor="@color/button_green"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/textViewSNo"
+        android:layout_alignBaseline="@+id/textViewCode"
+        android:layout_alignBottom="@+id/textViewCode"
+        android:layout_alignLeft="@+id/buttonA"
+        android:layout_alignStart="@+id/buttonA"
+        android:layout_toLeftOf="@+id/textViewCode"
+        android:layout_toStartOf="@+id/textViewCode" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:background="@drawable/edittext"
+        android:ems="5"
+        android:focusable="false"
+        android:paddingLeft="15dp"
+        android:id="@+id/editText"
+        android:layout_marginTop="93dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/buttonB"
+        android:layout_alignEnd="@+id/buttonB" />
+
+    <TextView
+        android:text="Code"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/button_green"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/textViewCode"
+        android:layout_alignBaseline="@+id/textViewCJX"
+        android:layout_alignBottom="@+id/textViewCJX"
+        android:layout_alignLeft="@+id/buttonB"
+        android:layout_alignStart="@+id/buttonB"
+        android:layout_toLeftOf="@+id/button_clear"
+        android:layout_toStartOf="@+id/button_clear" />
+
+    <TextView
+        android:text="How to play?"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/table_main"
+        android:layout_marginTop="39dp"
+        android:id="@+id/howtoplay"
+        android:layout_alignRight="@+id/buttonE"
+        android:layout_alignEnd="@+id/buttonE"
+        android:layout_toEndOf="@+id/textViewSNo"
+        android:onClick="onclickhowtoplay"
+        android:layout_toRightOf="@+id/textViewSNo" />
+
+
+</RelativeLayout>

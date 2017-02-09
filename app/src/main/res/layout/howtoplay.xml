@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/howtoplay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/allScreensBG"
+    tools:context="com.thinkhole.deCODE.instructions"
+    android:weightSum="1">
+
+
+    <TextView
+        android:text="@string/howtoplay"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="65dp"
+        android:textColor="#faf8d3"
+        android:textStyle="normal"
+        android:paddingLeft="10dp"
+        android:textAlignment="viewStart"
+        android:id="@+id/howtoplaydescription"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:text="How to play?"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="25dp"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/howtoplayheading"
+        android:onClick="onclickhowtoplay"
+        android:layout_marginTop="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Close"
+        android:background="@drawable/editcheckbutton"
+        android:backgroundTint="@color/allScreensBG"
+        android:textColor="@color/bright_green"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginEnd="13dp"
+        android:id="@+id/button"
+        android:onClick="onclickclose"
+        android:layout_alignBottom="@+id/howtoplaydescription"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
