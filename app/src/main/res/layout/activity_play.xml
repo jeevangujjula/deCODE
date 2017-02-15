@@ -166,7 +166,7 @@
 
     <TextView
         android:text="How to play?"
-        android:textColor="@android:color/holo_orange_light"
+        android:textColor="#f7d618"
         android:textSize="20dp"
         android:textStyle="italic"
         android:textAlignment="center"

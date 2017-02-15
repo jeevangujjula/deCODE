@@ -8,23 +8,25 @@ import android.widget.Button;
 
 public class GameActivity extends AppCompatActivity {
 
-    Button button_newgame,button_instructions,button_exit;
+    Button button_newgame, button_instructions, button_exit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
     }
-        public void onclicknewgame(View view){
-            Intent intent = new Intent(this, PlayActivity.class);
-            startActivity(intent);
-            //startActivity(new Intent(Settings.ACTION_QUICK_LAUNCH_SETTINGS));;
+
+    public void onclicknewgame(View view) {
+        Intent intent = new Intent(this, PlayActivity.class);
+        startActivity(intent);
     }
-    public void onclickexit(View view){
+
+    public void onclickexit(View view) {
         this.finish();
-        //startActivity(new Intent(Settings.ACTION_QUICK_LAUNCH_SETTINGS));;
     }
-    public void onclickinstructions(View view){
-        Intent instructionsintent = new Intent(this,instructions.class);
+
+    public void onclickinstructions(View view) {
+        Intent instructionsintent = new Intent(this, instructions.class);
         startActivity(instructionsintent);
     }
 
