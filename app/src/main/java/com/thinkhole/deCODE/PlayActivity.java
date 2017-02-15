@@ -232,6 +232,8 @@ public class PlayActivity extends AppCompatActivity {
 					.show();
 		}
 	}
+
+    // Alert box after winning the game.
 	public void won(String code) {
 		AlertDialog.Builder builder3 = new AlertDialog.Builder(context);
 		builder3
