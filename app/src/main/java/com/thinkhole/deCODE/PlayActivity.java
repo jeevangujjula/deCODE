@@ -178,7 +178,7 @@ public class PlayActivity extends AppCompatActivity {
                             // a different position matches the letter in the code
                             forxloop:
                             for (q = flag.length() - 1; q > -1; q--) {
-                                if ((l == flag.charAt(x))) {
+                                if ((l == flag.charAt(q))) {
                                     j++;
                                     break forxloop; // if matches, then exit out of forxloop
                                 }
@@ -242,8 +242,9 @@ public class PlayActivity extends AppCompatActivity {
 				.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
 						// continue with delete
-                        Intent loseintent = getIntent();
-                        startActivity(loseintent);
+                        Intent wonintent = getIntent();
+                        startActivity(wonintent);
+                        wonintent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 					}
 				}).setNegativeButton("No",new DialogInterface.OnClickListener(){
             public void onClick(DialogInterface dialog, int which){
@@ -257,5 +258,13 @@ public class PlayActivity extends AppCompatActivity {
     public void onclickhowtoplay(View view){
         Intent instructionsintent = new Intent(this,instructions.class);
         startActivity(instructionsintent);
+    }
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        startActivity(new Intent(this, GameActivity.class));
+        finish();
+
     }
 }
