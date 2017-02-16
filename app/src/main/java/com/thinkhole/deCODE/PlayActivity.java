@@ -4,7 +4,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
@@ -23,6 +25,7 @@ public class PlayActivity extends AppCompatActivity {
 	final Context context = this;
 	String input;
 	int loop = 6; //maximum guesses for a game is 6.
+    Vibrator vib;
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -48,11 +51,13 @@ public class PlayActivity extends AppCompatActivity {
         Button btnClear = (Button) findViewById(R.id.button_clear); //Button Clear
         Button btnCheck = (Button) findViewById(R.id.button_check); //Button Check
         final TextView text = (TextView) findViewById(R.id.editText);//Input text field.
+        vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         //on click button A, append character A to the input text field
         btnA.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
+                vib.vibrate(50);
                 text.append("A");
             }
         });
@@ -60,6 +65,7 @@ public class PlayActivity extends AppCompatActivity {
         btnB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
+                vib.vibrate(50);
                 text.append("B");
             }
         });
@@ -67,6 +73,7 @@ public class PlayActivity extends AppCompatActivity {
         btnC.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
+                vib.vibrate(50);
                 text.append("C");
             }
         });
@@ -74,6 +81,7 @@ public class PlayActivity extends AppCompatActivity {
         btnD.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
+                vib.vibrate(50);
                 text.append("D");
             }
         });
@@ -81,6 +89,7 @@ public class PlayActivity extends AppCompatActivity {
         btnE.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
+                vib.vibrate(50);
                 text.append("E");
             }
         });
@@ -88,6 +97,7 @@ public class PlayActivity extends AppCompatActivity {
         btnF.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
+                vib.vibrate(50);
                 text.append("F");
             }
         });
@@ -97,6 +107,7 @@ public class PlayActivity extends AppCompatActivity {
             btnClear.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    vib.vibrate(50);
                     String textString = text.getText().toString();
                     if (textString.length() > 0) {
                         text.setText(textString.substring(0, textString.length() - 1));
@@ -121,6 +132,7 @@ public class PlayActivity extends AppCompatActivity {
         final String flag = String.valueOf(newArray);  // Code to be guessed.
         btnCheck.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                vib.vibrate(50);
                 input = text.getText().toString();
                 char[] n = new char[4];
                 int c = 0, j = 0, x = 0, q = 0;
@@ -256,12 +268,14 @@ public class PlayActivity extends AppCompatActivity {
 	}
 
     public void onclickhowtoplay(View view){
+        vib.vibrate(50);
         Intent instructionsintent = new Intent(this,instructions.class);
         startActivity(instructionsintent);
     }
     @Override
     public void onBackPressed()
     {
+        vib.vibrate(50);
         super.onBackPressed();
         startActivity(new Intent(this, GameActivity.class));
         finish();
