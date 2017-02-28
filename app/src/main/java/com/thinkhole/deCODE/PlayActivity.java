@@ -42,6 +42,7 @@ public class PlayActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
+
         Button btnA = (Button) findViewById(R.id.buttonA);  //Button A
         Button btnB = (Button) findViewById(R.id.buttonB);  //Button B
         Button btnC = (Button) findViewById(R.id.buttonC);  //Button C
@@ -155,6 +156,7 @@ public class PlayActivity extends AppCompatActivity {
                 if (loop == 1) {
                     AlertDialog.Builder builder2 = new AlertDialog.Builder(context);
                     builder2
+                            .setCancelable(false)
                             .setTitle("You Lose !")
                             .setMessage("The CODE is : " + flag + "\n\n Play again?")
                             .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -217,11 +219,11 @@ public class PlayActivity extends AppCompatActivity {
 	public void init(int c, int j, int x, int loop, String text) {
 		TableLayout stk = (TableLayout) findViewById(R.id.table_main);
 		TableRow tbrow = new TableRow(this);
-		TextView t1v = new TextView(this);	t1v.setWidth(260);	t1v.setHeight(150);	t1v.setTextColor(Color.rgb(215,204,200));	t1v.setGravity(Gravity.CENTER); t1v.setTextSize(16);
-		TextView t2v = new TextView(this);	t2v.setWidth(270);	t2v.setHeight(150);	t2v.setTextColor(Color.rgb(215,204,200));	t2v.setGravity(Gravity.CENTER); t2v.setTextSize(16);
-		TextView t3v = new TextView(this);	t3v.setWidth(170);	t3v.setHeight(150);	t3v.setTextColor(Color.rgb(215,204,200));	t3v.setGravity(Gravity.CENTER); t3v.setTextSize(16);
-		TextView t4v = new TextView(this);	t4v.setWidth(290);	t4v.setHeight(150);	t4v.setTextColor(Color.rgb(215,204,200));	t4v.setGravity(Gravity.CENTER); t4v.setTextSize(16);
-		TextView t5v = new TextView(this);	t5v.setWidth(260);	t5v.setHeight(150);	t5v.setTextColor(Color.rgb(215,204,200));	t5v.setGravity(Gravity.CENTER); t5v.setTextSize(16);
+		TextView t1v = new TextView(this);	t1v.setWidth(200);	t1v.setHeight(140);	t1v.setTextColor(Color.rgb(215,204,200));	t1v.setGravity(Gravity.CENTER); t1v.setTextSize(16);
+		TextView t2v = new TextView(this);	t2v.setWidth(160);	t2v.setHeight(140);	t2v.setTextColor(Color.rgb(215,204,200));	t2v.setGravity(Gravity.CENTER); t2v.setTextSize(16);
+		TextView t3v = new TextView(this);	t3v.setWidth(180);	t3v.setHeight(140);	t3v.setTextColor(Color.rgb(215,204,200));	t3v.setGravity(Gravity.CENTER); t3v.setTextSize(16);
+		TextView t4v = new TextView(this);	t4v.setWidth(200);	t4v.setHeight(140);	t4v.setTextColor(Color.rgb(215,204,200));	t4v.setGravity(Gravity.CENTER); t4v.setTextSize(16);
+		TextView t5v = new TextView(this);	t5v.setWidth(200);	t5v.setHeight(140);	t5v.setTextColor(Color.rgb(215,204,200));	t5v.setGravity(Gravity.CENTER); t5v.setTextSize(16);
 		t1v.setText("" + loop);		tbrow.addView(t1v);
 		t2v.setText(" " + input);	tbrow.addView(t2v);
 		t3v.setText("" + c);		tbrow.addView(t3v);
@@ -249,6 +251,7 @@ public class PlayActivity extends AppCompatActivity {
 	public void won(String code) {
 		AlertDialog.Builder builder3 = new AlertDialog.Builder(context);
 		builder3
+                .setCancelable(false)
 				.setTitle("You Won !")
 				.setMessage("That's awesome !! The CODE is : " + code + "\n\n Play Again?")
 				.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -258,13 +261,13 @@ public class PlayActivity extends AppCompatActivity {
                         startActivity(wonintent);
                         wonintent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 					}
-				}).setNegativeButton("No",new DialogInterface.OnClickListener(){
-            public void onClick(DialogInterface dialog, int which){
+				}).setNegativeButton("No", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
                 PlayActivity.this.finish();
             }
         })
-				.setIcon(android.R.drawable.ic_dialog_alert)
-				.show();
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
 	}
 
     public void onclickhowtoplay(View view){

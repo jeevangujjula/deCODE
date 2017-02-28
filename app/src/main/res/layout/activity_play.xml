@@ -1,185 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_play"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#682324"
-    tools:context="com.thinkhole.deCODE.PlayActivity">
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/activity_play"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#682324"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.thinkhole.deCODE.PlayActivity">
 
     <TextView
-        android:text="C         J           X"
+        android:id="@+id/textViewCJX"
         android:layout_width="200dp"
         android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buttonF"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="45dp"
+        android:text="C         J           X"
         android:textAlignment="center"
         android:textColor="#f7d618"
         android:textSize="20dp"
-        android:textStyle="bold"
-        android:id="@+id/textViewCJX"
-        android:layout_marginTop="45dp"
-        android:layout_below="@+id/buttonF"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="26dp"
-        android:layout_marginEnd="26dp" />
+        android:textStyle="bold"/>
 
     <Button
-        android:text="A"
+        android:id="@+id/buttonA"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/editcheckbutton"
-        android:layout_marginTop="22dp"
-        android:id="@+id/buttonA"
         android:layout_below="@+id/editText"
-        android:layout_marginLeft="35dp"/>
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/editcheckbutton"
+        android:text="A"/>
 
     <Button
-        android:text="Check"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:background="@drawable/editcheckbutton"
         android:id="@+id/button_check"
-        android:layout_alignTop="@+id/editText"
-        android:layout_alignBaseline="@id/editText"
-        android:layout_alignRight="@+id/textViewCJX"
-        android:layout_alignEnd="@+id/textViewCJX" />
-
-    <Button
-        android:text="Clear"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:id="@+id/button_clear"
+        android:layout_alignBaseline="@id/editText"
+        android:layout_alignEnd="@+id/textViewCJX"
+        android:layout_alignRight="@+id/textViewCJX"
+        android:layout_alignTop="@+id/editText"
         android:background="@drawable/editcheckbutton"
+        android:text="Check"/>
+
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
         android:layout_alignBaseline="@+id/editText"
         android:layout_alignBottom="@+id/editText"
+        android:layout_marginRight="10dp"
         android:layout_toLeftOf="@+id/button_check"
         android:layout_toStartOf="@+id/button_check"
-        android:layout_marginRight="10dp"/>
+        android:background="@drawable/editcheckbutton"
+        android:text="Clear"/>
 
     <Button
-        android:text="B"
+        android:id="@+id/buttonB"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/editcheckbutton"
-        android:id="@+id/buttonB"
         android:layout_alignBaseline="@+id/buttonA"
         android:layout_alignBottom="@+id/buttonA"
-        android:layout_marginLeft="85dp"/>
+        android:layout_marginLeft="85dp"
+        android:background="@drawable/editcheckbutton"
+        android:text="B"/>
 
     <Button
-        android:text="E"
-        android:layout_width="40dp"
-        android:layout_height="wrap_content"
         android:id="@+id/buttonE"
-        android:background="@drawable/editcheckbutton"
-        android:layout_above="@+id/textViewCJX"
-        android:layout_marginLeft="235dp" />
-
-    <Button
-        android:text="F"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewCJX"
+        android:layout_marginLeft="235dp"
         android:background="@drawable/editcheckbutton"
+        android:text="E"/>
+
+    <Button
         android:id="@+id/buttonF"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/buttonD"
         android:layout_alignBottom="@+id/buttonD"
-        android:layout_marginLeft="285dp"/>
+        android:layout_marginLeft="285dp"
+        android:background="@drawable/editcheckbutton"
+        android:text="F"/>
 
     <Button
-        android:text="D"
+        android:id="@+id/buttonD"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonD"
-        android:background="@drawable/editcheckbutton"
         android:layout_alignBaseline="@+id/buttonC"
         android:layout_alignBottom="@+id/buttonC"
-        android:layout_marginLeft="185dp"/>
+        android:layout_marginLeft="185dp"
+        android:background="@drawable/editcheckbutton"
+        android:text="D"/>
 
     <Button
-        android:text="C"
+        android:id="@+id/buttonC"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonC"
-        android:background="@drawable/editcheckbutton"
         android:layout_alignBaseline="@+id/buttonB"
         android:layout_alignBottom="@+id/buttonB"
-        android:layout_marginLeft="135dp"/>
+        android:layout_marginLeft="135dp"
+        android:background="@drawable/editcheckbutton"
+        android:text="C"/>
 
     <TableLayout
         android:id="@+id/table_main"
         android:layout_width="wrap_content"
-        android:layout_height="230dp"
-        android:layout_centerHorizontal="true"
+        android:layout_height="290dp"
         android:layout_alignLeft="@id/editText"
         android:layout_alignRight="@id/button_check"
-        android:layout_below="@+id/textViewCJX">
+        android:layout_below="@+id/textViewCJX"
+        android:layout_centerHorizontal="true">
     </TableLayout>
 
     <TextView
-        android:text="S.No"
+        android:id="@+id/textViewSNo"
         android:layout_width="80dp"
         android:layout_height="30dp"
-        android:textColor="@color/button_green"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:id="@+id/textViewSNo"
         android:layout_alignBaseline="@+id/textViewCode"
         android:layout_alignBottom="@+id/textViewCode"
         android:layout_alignLeft="@+id/buttonA"
         android:layout_alignStart="@+id/buttonA"
         android:layout_toLeftOf="@+id/textViewCode"
-        android:layout_toStartOf="@+id/textViewCode" />
+        android:layout_toStartOf="@+id/textViewCode"
+        android:text="S.No"
+        android:textColor="@color/button_green"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
 
     <EditText
+        android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:inputType="textPersonName"
+        android:layout_alignEnd="@+id/buttonB"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/buttonB"
+        android:layout_marginTop="53dp"
         android:background="@drawable/edittext"
         android:ems="5"
         android:focusable="false"
-        android:paddingLeft="15dp"
-        android:id="@+id/editText"
-        android:layout_marginTop="93dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/buttonB"
-        android:layout_alignEnd="@+id/buttonB" />
+        android:inputType="textPersonName"
+        android:paddingLeft="15dp"/>
 
     <TextView
-        android:text="Code"
+        android:id="@+id/textViewCode"
         android:layout_width="80dp"
         android:layout_height="30dp"
-        android:textAlignment="center"
-        android:textColor="@color/button_green"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:id="@+id/textViewCode"
         android:layout_alignBaseline="@+id/textViewCJX"
         android:layout_alignBottom="@+id/textViewCJX"
         android:layout_alignLeft="@+id/buttonB"
         android:layout_alignStart="@+id/buttonB"
         android:layout_toLeftOf="@+id/button_clear"
-        android:layout_toStartOf="@+id/button_clear" />
+        android:layout_toStartOf="@+id/button_clear"
+        android:text="Code"
+        android:textAlignment="center"
+        android:textColor="@color/button_green"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
 
     <TextView
-        android:text="How to play?"
-        android:textColor="#f7d618"
-        android:textSize="20dp"
-        android:textStyle="italic"
-        android:textAlignment="center"
+        android:id="@+id/howtoplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/table_main"
-        android:layout_marginTop="39dp"
-        android:id="@+id/howtoplay"
-        android:layout_alignRight="@+id/buttonE"
         android:layout_alignEnd="@+id/buttonE"
+        android:layout_alignRight="@+id/buttonE"
+        android:layout_below="@+id/table_main"
+        android:layout_marginTop="20dp"
         android:layout_toEndOf="@+id/textViewSNo"
+        android:layout_toRightOf="@+id/textViewSNo"
         android:onClick="onclickhowtoplay"
-        android:layout_toRightOf="@+id/textViewSNo" />
-
+        android:text="How to play?"
+        android:textAlignment="center"
+        android:textColor="#f7d618"
+        android:textSize="20dp"
+        android:textStyle="italic"/>
 
 </RelativeLayout>
